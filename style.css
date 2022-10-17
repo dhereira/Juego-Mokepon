@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+body{
+    background-color: #D2EBE9;
+    font-family: 'Fredoka One', cursive;
+}
+
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.titulo {    
+color: #230444;
+width: 310px;
+height: 50px;
+font-size: 32px;
+}
+.subtitulo {
+    color: #230444;
+    font-size: 20px;
+}
+.tarjeta-boton {
+    display: flex;
+    gap: 10px;
+}
+.tarjeta-mokepon {
+    background-color: #ED8240;
+    height: 100px;
+    width: 168px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 20px;
+    color: #230444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tarjeta-mokepon :active {
+    background-color:#90303D;
+}
+.tarjeta-mokepon img{
+    height: 80px;
+    
+}
+input {
+  display: none; 
+}
+input:checked + label {
+    background-color:#90303D;
+}
+#boton-mascota {
+    width: 170px;
+    height: 46px;
+    border-radius: 20px;
+    background-color:  #90303D;
+    color: #D2EBE9;
+    border-color: #230444;
+    border-width: 1px;
+    margin-top: 16px;
+}
+
+#seleccionar-ataque {
+    flex-direction: column ;
+    align-items: center;
+    justify-content: center;    
+}
+.boton-ataque{
+    width: 100px;
+    background-color: #90303D;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 20px;
+    border-color: transparent;
+    margin-top: 10px;
+    margin-right: 12px;
+    font-family: 'Fredoka One', cursive;
+}
+#caja-mensajes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+#columna-mascotas {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    color: #230444;
+}
+#columna-jugador, #columna-enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: larger;
+}
+#mensajes {
+    display: flex;
+    background-color:whitesmoke;
+    flex-direction: column;
+    align-items: center;
+    color: #230444;
+    width: 300px;
+    margin-top: 24px;
+    border-radius: 20px;
+    border-color: #230444;
+    border-style: solid;
+    border-width: 2px;
+}
+#boton-reiniciar {
+    font-family: 'Fredoka One', cursive;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #ED8240; 
+    margin-top: 25px;
+}
+
+@media (max-width: 360px) {
+    .tarjeta-boton, .contenedor-botones-ataques {
+      display: flex;  
+      flex-direction: column;
+    }
+  }
