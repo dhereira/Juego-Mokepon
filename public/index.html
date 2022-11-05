@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOKEPON!</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>        
+        <section id="seleccionar-mascota">
+            <h1 class="titulo">MOKEPON! 🔥💧🌱</h1>
+            <h2 class="subtitulo">Elige tu mascota</h2>
+            <div id="contenedor-tarjetas" class="tarjeta-boton">
+       
+            </div>
+            <button id="boton-mascota">Seleccionar</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h1>Recorre el mapa con tu mokepon</h1>
+            <canvas id="mapa"> </canvas>
+            <div class="contenedor-boton-arriba">
+                <button class="boton-mover" onmouseup="detenerMovimiento()" ontouchend="detenerMovimiento()" onmousedown="moverArriba()" ontouchstart="moverArriba()">Mover Arriba</button>
+            </div>
+
+            <div class="contenedor-demas-botones">    
+                <button class="boton-mover" onmouseup="detenerMovimiento()" ontouchend="detenerMovimiento()" onmousedown="moverIzquierda()" ontouchstart="moverIzquierda()">Mover Izquierda</button>
+                <button class="boton-mover" onmouseup="detenerMovimiento()" ontouchend="detenerMovimiento()" onmousedown="moverAbajo()" ontouchstart="moverAbajo()">Mover Abajo</button>                
+                <button class="boton-mover" onmouseup="detenerMovimiento()" ontouchend="detenerMovimiento()" onmousedown="moverDerecha()" ontouchstart="moverDerecha()">Mover Derecha</button>
+            </div>
+        </section>
+
+        <section id="seleccionar-ataque">
+            <h1 class="titulo">MOKEPON! 🔥💧🌱</h1>
+            <h2 class="subtitulo">Elige tu ataque</h2>
+            <div id="contenedor-ataques" class="contenedor-botones-ataques">
+                <!-- <button id="boton-fuego" class ="boton-ataque">Fuego 🔥</button>
+                <button id="boton-agua" class ="boton-ataque">Agua 💧</button>
+                <button id="boton-tierra" class ="boton-ataque">Tierra 🌱</button> -->
+            </div>
+
+        </section>
+     
+        <div id="caja-mensajes">
+            <section id="reiniciar">
+              <button id="boton-reiniciar">Reiniciar</button>
+            </section>    
+            <section id="mensajes">
+                ¡Buena suerte!
+            </section>
+       </div>
+        <div id="columna-mascotas">
+            <div id="columna-jugador"> 
+                <p id="mascota-jugador"></p> 
+                <p> <span id="vidas-jugador">0</span> <span>vidas</span></p>
+            </div>
+            <div id="columna-enemigo"> 
+                <p id="mascota-enemiga"></p> 
+                <p> <span id="vidas-enemigo">0</span> <span>vidas</span></p>
+            </div>
+        </div>
+
+       <script src="./js/mokepon.js"></script>
+    </body>
+</html>
