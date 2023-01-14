@@ -390,6 +390,7 @@ function escogerMokepon(name){
     return mokepones.find(mascota=> mascota.nombre === name);
 }
 function reiniciarJuego(){
+    borrarId();
     location.reload();
 }  
 function iniciarJuego(){
@@ -410,7 +411,7 @@ function iniciarJuego(){
     inputRatigueya = document.getElementById("Ratigueya");    
 
     botonMascotaJugador.addEventListener("click", seleccionarMascotaJugador );
-    //revisarVidas();
+    
     reinicio.addEventListener("click", reiniciarJuego);
     unirseAlJuego();
 }
@@ -520,7 +521,6 @@ function unirseAlJuego(){
         })
 }
 function enviarMokepon(nombreMascota){
-    //console.log(nombreMascota)
     fetch(`http://192.168.1.161:8080/mokepon/${jugadorId}`, {
         method: "post",
         headers: {
@@ -572,5 +572,13 @@ function enviarPosicion(x, y){
         }
     })
 }
-
+function borrarId(){
+    fetch(`http://192.168.1.161:8080/mokepon/${jugadorId}/delete`,{
+        method: "delete",
+        headers:{
+            "Content-Type": "application/json"
+        },
+       
+    })
+}
 window.addEventListener("load", iniciarJuego);

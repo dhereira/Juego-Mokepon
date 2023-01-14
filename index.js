@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.static('public'));
 app.use(express.json());
 
-const jugadores = [];
+let jugadores = [];
 
 class Jugador {
     constructor(id){
@@ -85,6 +85,11 @@ app.get("/mokepon/:jugadorId/ataques", (req, res) =>{
     res.send({
         ataques: jugador.ataques || []
     })    
+})
+app.delete("/mokepon/:jugadorId/delete", (req, res)=>{
+    const jugadorId = req.params.jugadorId || "";
+    jugadores = jugadores.filter((jugador) => jugador.id !=jugadorId);
+    console.log(jugadores);
 })
 
 app.listen(8080,()=>{    
